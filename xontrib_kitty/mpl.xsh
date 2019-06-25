@@ -97,6 +97,7 @@ def interactive_pyplot(module=None, **kwargs):
             return rtn
         else:
             # write directly to the screen
+            figmanager = pylab_helpers.Gcf.get_active()
             fig = module.gcf()
             current_size = fig.get_size_inches() * fig.dpi
             w = window_width()
