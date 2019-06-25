@@ -104,7 +104,7 @@ def interactive_pyplot(module=None, **kwargs):
                                 current_size[1] * (w/ current_size[0] / fig.dpi))
             data = _get_buffer(fig, format="png", dpi=fig.dpi).read()
             write_chunked({'a': 'T', 'f': 100}, data)
-            fig.set_size_inches(current_size)
+            fig.set_size_inches(current_size / fig.dpi)
 
     module.show = xonsh_show
 
