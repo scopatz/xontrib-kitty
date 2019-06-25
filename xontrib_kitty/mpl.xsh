@@ -46,7 +46,7 @@ def serialize_gr_command(cmd, payload=None):
     if payload:
         ans.append(b';')
         ans.append(payload)
-    ans.append(b'\033\\\n')
+    ans.append(b'\033\\')
     return b''.join(ans)
 
 
@@ -59,6 +59,7 @@ def write_chunked(cmd, data):
         sys.stdout.buffer.write(serialize_gr_command(cmd, chunk))
         sys.stdout.flush()
         cmd.clear()
+    print("\r", flush=True)
 
 
 def window_width():
@@ -99,6 +100,7 @@ def interactive_pyplot(module=None, **kwargs):
             # write directly to the screen
             figmanager = pylab_helpers.Gcf.get_active()
             fig = module.gcf()
+            #fig = figmanager.canvas.figure
             current_size = fig.get_size_inches() * fig.dpi
             w = window_width()
             fig.set_size_inches(w/fig.dpi,
@@ -106,6 +108,8 @@ def interactive_pyplot(module=None, **kwargs):
             data = _get_buffer(fig, format="png", dpi=fig.dpi).read()
             write_chunked({'a': 'T', 'f': 100}, data)
             fig.set_size_inches(current_size / fig.dpi)
+            fig.canvas.draw_idle()
+            return None
 
     module.show = xonsh_show
 
@@ -115,3 +119,6 @@ def interactive_pyplot(module=None, **kwargs):
         """Redraws the current matplotlib figure after each command."""
         pylab_helpers.Gcf.draw_all()
 
+
+if 'matplotlib.pyplot' in sys.modules:
+    interactive_pyplot(module=sys.modules['matplotlib.pyplot'])
