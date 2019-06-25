@@ -17,7 +17,7 @@ $BASH_COMPLETIONS.insert(0, XONSH_KITTY_BASH_COMP)
 aliases["icat"] = ("kitty", "+kitten", "icat")
 aliases["d"] = ("kitty", "+kitten", "diff",
     "--override", "pygments_style=$XONSH_COLOR_STYLE")
-alaises["hints"] = ("kitty", "+kitten", "hints")
-alaises["clipboard"] = ("kitty", "+kitten", "clipboard")
+aliases["hints"] = ("kitty", "+kitten", "hints")
+aliases["clipboard"] = ("kitty", "+kitten", "clipboard")
 if ON_LINUX or ON_BSD:
-    alaises["panel"] = ("kitty", "+kitten", "panel")
+    aliases["panel"] = ("kitty", "+kitten", "panel")
