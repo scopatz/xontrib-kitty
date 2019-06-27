@@ -10,7 +10,7 @@ def main():
         description="Xonsh hooks for the Kitty terminal emulator",
         long_description=readme,
         long_description_content_type="text/markdown",
-        version="0.0.0",
+        version="0.0.1",
         license="BSD-2-Clause",
         author="Anthony Scopatz",
         maintainer="Anthony Scopatz",
