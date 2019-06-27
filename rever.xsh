@@ -1,7 +1,8 @@
 $GITHUB_ORG = 'scopatz'
 $PROJECT = $GITHUB_REPO = 'xontrib-kitty'
 $WEBSITE_URL = 'https://github.com/scopatz/xontrib-kitty'
-$ACTIVITIES = ['authors', 'version_bump', 'changelog',
+$ACTIVITIES = [#'authors',
+               'version_bump', 'changelog',
                'tag', 'push_tag', 'ghrelease',
                'pypi', #'conda_forge',
                ]
