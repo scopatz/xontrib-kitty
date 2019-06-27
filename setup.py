@@ -2,9 +2,14 @@ from setuptools import setup
 
 
 def main():
+    with open('README.md') as f:
+        readme = f.read()
+
     kw = dict(
         name="xontib-kitty",
         description="Xonsh hooks for the Kitty terminal emulator",
+        long_description=readme,
+        long_description_content_type="text/markdown",
         version="0.0.0",
         license="BSD-2-Clause",
         author="Anthony Scopatz",
