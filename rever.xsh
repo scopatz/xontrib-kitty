@@ -10,7 +10,7 @@ $ACTIVITIES = [#'authors',
 
 $AUTHORS_FILENAME = "AUTHORS.rst"
 $VERSION_BUMP_PATTERNS = [
-    ('xonsh_kitty/__init__.py', r'__version__\s*=.*', '__version__ = "$VERSION"'),
+    ('xontrib_kitty/__init__.py', r'__version__\s*=.*', '__version__ = "$VERSION"'),
     ('setup.py', r'version\s*=.*', 'version="$VERSION",'),
     ]
 $CHANGELOG_FILENAME = 'CHANGELOG.rst'
