@@ -6,11 +6,11 @@ def main():
         readme = f.read()
 
     kw = dict(
-        name="xontib-kitty",
+        name="xontrib-kitty",
         description="Xonsh hooks for the Kitty terminal emulator",
         long_description=readme,
         long_description_content_type="text/markdown",
-        version="0.0.1",
+        version="0.0.2",
         license="BSD-2-Clause",
         author="Anthony Scopatz",
         maintainer="Anthony Scopatz",
