@@ -4,8 +4,10 @@ $WEBSITE_URL = 'https://github.com/scopatz/xontrib-kitty'
 $ACTIVITIES = ['authors',
                'version_bump', 'changelog',
                'tag', 'push_tag', 'ghrelease',
-               'pypi', #'conda_forge',
+               'pypi',
+               'conda_forge',
                ]
+$PYPI_SIGN = False
 
 
 $AUTHORS_FILENAME = "AUTHORS.rst"
