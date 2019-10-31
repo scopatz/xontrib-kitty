@@ -1,4 +1,10 @@
 - name: Anthony Scopatz
   email: scopatz@gmail.com
-  num_commits: 14
+  num_commits: 19
   first_commit: 2019-06-24 18:19:55
+- name: Chris Lasher
+  email: chris.lasher@gmail.com
+  num_commits: 1
+  first_commit: 2019-10-13 01:45:47
+  github: gotgenes
+
