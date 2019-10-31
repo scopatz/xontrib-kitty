@@ -4,6 +4,20 @@ xontrib-kitty Change Log
 
 .. current developments
 
+v0.0.2
+====================
+
+**Fixed:**
+
+* Incorrect package name on PyPI
+
+**Authors:**
+
+* Anthony Scopatz
+* Chris Lasher
+
+
+
 v0.0.1
 ====================
 
